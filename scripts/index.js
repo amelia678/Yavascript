@@ -45,33 +45,50 @@
 // To convert from a string to a number,
 // use parseInt and provide base 10 as an argument
 
-let theDay = prompt("Day (0-6)");
+// let theDay = prompt("Day (0-6)");
+// theDay = parseInt(theDay, 10);
+
+
+// let dayName = `Invalid choice, buddy.`;
+// // you must use parentheses for your condition!!
+// // "loose" equality is ==
+// // "strict" equality is ===
+// // by default, use strict equality, ===
+// // "threequals"
+// if (theDay === 0) {
+//     dayName = 'Sunday';
+// } else if  (theDay === 1) {
+//     dayName = 'Monday' ;
+// } else if (theDay === 2) {
+//     dayName = 'Tuesday';
+// } else if (theDay === 3) {
+//     dayName = 'Wednesday';
+// } else if (theDay === 4) {
+//     dayName = 'Thursday';
+// } else if (theDay === 5) {
+//     dayName = 'Friday';
+// } else if (theDay === 6) {
+//     dayName = 'Saturday';
+// }
+// // the body of an if statement is surrounded
+// // by curly braces.
+// // And does not require a semi-colon after 
+// // the curly braces.
+// console.log(dayName);
+
+// WORK OR SLEEP IN?//
+
+let theDay = prompt("Enter a day (0-6)");
 theDay = parseInt(theDay, 10);
 
+let work_or_play = `Go to work` ;
 
-let dayName = `Invalid choice, buddy.`;
-// you must use parentheses for your condition!!
-// "loose" equality is ==
-// "strict" equality is ===
-// by default, use strict equality, ===
-// "threequals"
+
+
 if (theDay === 0) {
-    dayName = 'Sunday';
-} else if  (theDay === 1) {
-    dayName = 'Monday' ;
-} else if (theDay === 2) {
-    dayName = 'Tuesday';
-} else if (theDay === 3) {
-    dayName = 'Wednesday';
-} else if (theDay === 4) {
-    dayName = 'Thursday';
-} else if (theDay === 5) {
-    dayName = 'Friday';
-} else if (theDay === 6) {
-    dayName = 'Saturday';
+    work_or_play = 'Sleep in';
+}   else if (theDay === 6) {
+    work_or_play = 'Sleep in';
 }
-// the body of an if statement is surrounded
-// by curly braces.
-// And does not require a semi-colon after 
-// the curly braces.
-console.log(dayName);
+    
+console.log(work_or_play);
