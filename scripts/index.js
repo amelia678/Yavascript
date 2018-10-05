@@ -130,6 +130,34 @@
 
 //  1 to 10 python translation//
 
-for (let count = 0; count < 10; count++) {
-    console.log(count);
+// for (let count = 0; count < 10; count++) {
+//     console.log(count);
+// }
+
+// COINS ////
+
+// need variables for 
+// - the user's answer
+// - how many coins they have
+// 
+// 
+console.log(`is this thing on?`);
+
+let whatUserSaid = `yes`;
+let numberOfCoins = 0;
+
+while (whatUserSaid === `yes`) {
+    // need a loop that:
+    //  - asks them if they want another coin
+    //  - if so, increment the count
+    //  - print tht number of  coins
+    whatUserSaid = prompt(`Hey, want another?`);
+    if (whatUserSaid === `yes`) {
+        numberOfCoins++;
+    }
+
+    debugger;
+    console.log(`You have ${numberOfCoins} coins`);
 }
+
+console.log(`Bye Felicia`);
