@@ -78,17 +78,51 @@
 
 // WORK OR SLEEP IN?//
 
-let theDay = prompt("Enter a day (0-6)");
-theDay = parseInt(theDay, 10);
+// let theDay = prompt("Enter a day (0-6)");
+// theDay = parseInt(theDay, 10);
 
-let work_or_play = `Go to work` ;
+// let work_or_play = `Go to work` ;
 
 
 
-if (theDay === 0) {
-    work_or_play = 'Sleep in';
-}   else if (theDay === 6) {
-    work_or_play = 'Sleep in';
-}
+// if (theDay === 0) {
+//     work_or_play = 'Sleep in';
+// }   else if (theDay === 6) {
+//     work_or_play = 'Sleep in';
+// }
     
-console.log(work_or_play);
+// console.log(work_or_play);
+
+
+// TIP CALCULATOR//
+
+// configuration
+const LEVEL_GOOD = `good`;
+const LEVEL_FAIR = `fair`;
+const LEVEL_BAD = `bad`;
+
+const TIP_GOOD = 0.2;
+const TIP_FAIR = 0.15;
+const TIP_BAD = 0.1;
+
+// start with const until something breaks
+
+const totalBill = 100;
+const levelOfService = `good`;
+
+let tip = 0.0;
+
+if (levelOfService === LEVEL_GOOD) {
+    tip = totalBill * TIP_GOOD;
+}   else if (levelOfService === LEVEL_FAIR) {
+    tip = totalBill * TIP_FAIR;
+}   else if (levelOfService === LEVEL_BAD) {
+    tip = totalBill * TIP_BAD;
+} else{
+    console.log(`Invalid. They can't be that bad`);
+}
+
+
+// result
+console.log(`Tip amount: ${tip}`);
+console.log(`Total amount: ${totalBill + tip}`);
