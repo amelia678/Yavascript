@@ -107,8 +107,8 @@ const TIP_BAD = 0.1;
 
 // start with const until something breaks
 
-const totalBill = 100;
-const levelOfService = `good`;
+const totalBill = parseFloat(`292.34`);
+const levelOfService = `fair`;
 
 let tip = 0.0;
 
@@ -124,5 +124,5 @@ if (levelOfService === LEVEL_GOOD) {
 
 
 // result
-console.log(`Tip amount: ${tip}`);
-console.log(`Total amount: ${totalBill + tip}`);
+console.log(`Tip amount: ${tip.toFixed(2)}`);
+console.log(`Total amount: ${(totalBill + tip).toFixed(2)}`);
