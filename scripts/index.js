@@ -168,9 +168,25 @@
 // need variable for:
 // - user input in C
 //  - fahrenheit conversion
-console.log(`Is this thing on?`);
+// console.log(`Is this thing on?`);
 
-let celcius = parseInt(prompt(`Temperature in C?`), 10);
-let fahrenheit = celcius * 1.8 + 32;
+// let celcius = parseInt(prompt(`Temperature in C?`), 10);
+// let fahrenheit = celcius * 1.8 + 32;
 
-console.log(`${(fahrenheit).toFixed(2)} degrees Fahrenheit`);
+// console.log(`${(fahrenheit).toFixed(2)} degrees Fahrenheit`);
+
+// MULTIPLICATION TABLE//
+
+// print multiplication table of numbers 1-10
+
+console.log(`ready to do some math, kids??`)
+
+let x = 1;
+while (x < 11) {
+    let y = 1;
+    while (y < 11) {
+        console.log(`${x} x ${y} = ${x *y}`);
+        y++;
+    }
+    x++;
+}
