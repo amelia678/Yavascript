@@ -141,23 +141,36 @@
 // - how many coins they have
 // 
 // 
-console.log(`is this thing on?`);
+// console.log(`is this thing on?`);
 
-let whatUserSaid = `yes`;
-let numberOfCoins = 0;
+// let whatUserSaid = `yes`;
+// let numberOfCoins = 0;
 
-while (whatUserSaid === `yes`) {
-    // need a loop that:
-    //  - asks them if they want another coin
-    //  - if so, increment the count
-    //  - print tht number of  coins
-    whatUserSaid = prompt(`Hey, want another?`);
-    if (whatUserSaid === `yes`) {
-        numberOfCoins++;
-    }
+// while (whatUserSaid === `yes`) {
+//     // need a loop that:
+//     //  - asks them if they want another coin
+//     //  - if so, increment the count
+//     //  - print tht number of  coins
+//     whatUserSaid = prompt(`Hey, want another?`);
+//     if (whatUserSaid === `yes`) {
+//         numberOfCoins++;
+//     }
 
-    debugger;
-    console.log(`You have ${numberOfCoins} coins`);
-}
+//     debugger;
+//     console.log(`You have ${numberOfCoins} coins`);
+// }
 
-console.log(`Bye Felicia`);
+// console.log(`Bye Felicia`);
+
+// CELCIOUS TO FAHRENHEIT//
+// with user input in C, convert temp to F
+
+// need variable for:
+// - user input in C
+//  - fahrenheit conversion
+console.log(`Is this thing on?`);
+
+let celcius = parseInt(prompt(`Temperature in C?`), 10);
+let fahrenheit = celcius * 1.8 + 32;
+
+console.log(`${(fahrenheit).toFixed(2)} degrees Fahrenheit`);
