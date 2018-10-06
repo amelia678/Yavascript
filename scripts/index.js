@@ -179,14 +179,34 @@
 
 // print multiplication table of numbers 1-10
 
-console.log(`ready to do some math, kids??`)
+// console.log(`ready to do some math, kids??`)
 
-let x = 1;
-while (x < 11) {
-    let y = 1;
-    while (y < 11) {
-        console.log(`${x} x ${y} = ${x *y}`);
-        y++;
+// let x = 1;
+// while (x < 11) {
+//     let y = 1;
+//     while (y < 11) {
+//         console.log(`${x} x ${y} = ${x *y}`);
+//         y++;
+//     }
+//     x++;
+// }
+
+// FIZZBUZZ//
+// -print a list of numbers 1-100
+//  - if a multiple of 3 and 5 (aka 15) print fizzbuzz
+// -  if a multiple of 3 print Buzz
+// - if a multople of 5 print Fizz
+let num = 1;
+
+while (num < 101) {
+    if (num % 15 === 0) {
+        console.log(`FizzBuzz`);
+    }   else if (num % 3 === 0) {
+            console.log(`Buzz`);
+    }   else if (num % 5 === 0) {
+            console.log(`Fizz`);
+    }   else  {
+        console.log(num);
     }
-    x++;
+    num++
 }
