@@ -224,32 +224,68 @@
 // console.log(`The length of the string is ${whoami.length} chars`);
 
 // LEETSPEAK//
-const text = `i dont think you're ready for this jelly`;
+// const text = `i dont think you're ready for this jelly`;
 
-const lettersToConvert = ['A', 'E', 'G', 'I', 'O', 'S', 'T'];
-const numbers          = ['4', '3', '6', '1', '0', '5', '7'];
+// const lettersToConvert = ['A', 'E', 'G', 'I', 'O', 'S', 'T'];
+// const numbers          = ['4', '3', '6', '1', '0', '5', '7'];
+
+// const textToTranslate = text.toUpperCase();
+// let translation = ``;
+
+// // ES6 style array iteration
+// // basically the equivaldnt of python's for loop
+// for (let letter of textToTranslate){
+//     // console.log(letter);
+//     // check to see if the current letter is in `lettersToConvert`
+//     // if so, grab the index
+//     let index = lettersToConvert.indexOf(letter);
+//     if (index !== -1) {
+//         let index = lettersToConvert.indexOf(letter);
+    
+//     // use the index to grab the corresponding item from `numbers`
+//     translation = translation + numbers[index];
+//     } else {
+
+//         // else, just use the original letter
+//         translation = translation + letter;    
+//     }
+// }
+
+
+// console.log(translation);
+
+const text = `i don't think you're ready for this jelly`;
+// object in JavaScript
+// is basically a "dictionary" in Python
+// you shall not use hipster string as keys! but values are ok
+
+const lettersToNumbers = {
+    'A' : '4',
+    'E' : '3',
+    'G' : '6',
+    'I' : '1',
+    'O' : '0',
+    'S' : '5',
+    'T' : '7',
+};
 
 const textToTranslate = text.toUpperCase();
 let translation = ``;
 
-// ES6 style array iteration
-// basically the equivaldnt of python's for loop
-for (let letter of textToTranslate){
-    // console.log(letter);
-    // check to see if the current letter is in `lettersToConvert`
-    // if so, grab the index
-    let index = lettersToConvert.indexOf(letter);
-    if (index !== -1) {
-        let index = lettersToConvert.indexOf(letter);
-    
-    // use the index to grab the corresponding item from `numbers`
-    translation = translation + numbers[index];
+// let's loop through the string to translate 
+for(let letter  of textToTranslate) {
+    // if the letter is a key in our "dictionary"
+    const replacement = lettersToNumbers[letter];
+    // and its value is not "falsey" : false, null, undefined, 0, '', NaN
+    if (lettersToNumbers[letter]){
+        console.log(`${letter} is ${replacement}`);
+        translation = translation + replacement;
     } else {
-
-        // else, just use the original letter
-        translation = translation + letter;    
+        console.log(`${letter} stays the same`);
+        translation = translation + letter;
     }
+    // use the translation
+    // otherwise, just use the original letter.
 }
-
 
 console.log(translation);
