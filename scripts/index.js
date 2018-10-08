@@ -196,17 +196,27 @@
 //  - if a multiple of 3 and 5 (aka 15) print fizzbuzz
 // -  if a multiple of 3 print Buzz
 // - if a multople of 5 print Fizz
-let num = 1;
+// let num = 1;
 
-while (num < 101) {
-    if (num % 15 === 0) {
-        console.log(`FizzBuzz`);
-    }   else if (num % 3 === 0) {
-            console.log(`Buzz`);
-    }   else if (num % 5 === 0) {
-            console.log(`Fizz`);
-    }   else  {
-        console.log(num);
-    }
-    num++
-}
+// while (num < 101) {
+//     if (num % 15 === 0) {
+//         console.log(`FizzBuzz`);
+//     }   else if (num % 3 === 0) {
+//             console.log(`Buzz`);
+//     }   else if (num % 5 === 0) {
+//             console.log(`Fizz`);
+//     }   else  {
+//         console.log(num);
+//     }
+//     num++;
+// }
+
+const whoami  = `i'm batman`;
+
+const first = whoami.slice(0,1).toUpperCase();
+
+// in python, this would be: whoami[1:]
+const rest = whoami.slice(1);
+console.log(first + rest);
+
+console.log(`The length of the string is ${whoami.length} chars`);
