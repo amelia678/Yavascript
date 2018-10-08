@@ -254,38 +254,81 @@
 
 // console.log(translation);
 
-const text = `i don't think you're ready for this jelly`;
-// object in JavaScript
-// is basically a "dictionary" in Python
-// you shall not use hipster string as keys! but values are ok
+// const text = `i don't think you're ready for this jelly`;
+// // object in JavaScript
+// // is basically a "dictionary" in Python
+// // you shall not use hipster string as keys! but values are ok
 
-const lettersToNumbers = {
-    'A' : '4',
-    'E' : '3',
-    'G' : '6',
-    'I' : '1',
-    'O' : '0',
-    'S' : '5',
-    'T' : '7',
-};
+// const lettersToNumbers = {
+//     'A' : '4',
+//     'E' : '3',
+//     'G' : '6',
+//     'I' : '1',
+//     'O' : '0',
+//     'S' : '5',
+//     'T' : '7',
+// };
+
+// const textToTranslate = text.toUpperCase();
+// let translation = ``;
+
+// // let's loop through the string to translate 
+// for(let letter  of textToTranslate) {
+//     // if the letter is a key in our "dictionary"
+//     const replacement = lettersToNumbers[letter];
+//     // and its value is not "falsey" : false, null, undefined, 0, '', NaN
+//     if (lettersToNumbers[letter]){
+//         console.log(`${letter} is ${replacement}`);
+//         translation = translation + replacement;
+//     } else {
+//         console.log(`${letter} stays the same`);
+//         translation = translation + letter;
+//     }
+//     // use the translation
+//     // otherwise, just use the original letter.
+// }
+
+// console.log(translation);
+
+const text = `i don't think you're ready for this jelly`;
 
 const textToTranslate = text.toUpperCase();
 let translation = ``;
 
-// let's loop through the string to translate 
-for(let letter  of textToTranslate) {
-    // if the letter is a key in our "dictionary"
+// a fucntion that accetps a letter as an argument
+// it will return either the tranlation
+// or the original letter.
+
+// equivalent python:
+// def tranlate(letter)
+function translate(letter) {
+    letter = letter.toUpperCase();
+    const lettersToNumbers = {
+            'A' : '4',
+            'E' : '3',
+            'G' : '6',
+            'I' : '1',
+            'O' : '0',
+            'S' : '5',
+            'T' : '7',
+        };
+
     const replacement = lettersToNumbers[letter];
-    // and its value is not "falsey" : false, null, undefined, 0, '', NaN
-    if (lettersToNumbers[letter]){
-        console.log(`${letter} is ${replacement}`);
-        translation = translation + replacement;
-    } else {
-        console.log(`${letter} stays the same`);
-        translation = translation + letter;
-    }
-    // use the translation
-    // otherwise, just use the original letter.
+    // if (replacement) {
+    //     return replacement;
+    // } else {
+    //     return letter;
+    // }
+    return replacement || letter;
 }
 
-console.log(translation);
+function translateSentence(sentence) {
+    let translation = ``;
+
+for (let character of sentence) {
+    translation = translation + translate(character);
+    }
+    return translation;
+}
+console.log(translateSentence(textToTranslate))
+// console.log(translation)
