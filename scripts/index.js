@@ -211,12 +211,45 @@
 //     num++;
 // }
 
-const whoami  = `i'm batman`;
+// CAPITALIZE//
 
-const first = whoami.slice(0,1).toUpperCase();
+// const whoami  = `i'm batman`;
 
-// in python, this would be: whoami[1:]
-const rest = whoami.slice(1);
-console.log(first + rest);
+// const first = whoami.slice(0,1).toUpperCase();
 
-console.log(`The length of the string is ${whoami.length} chars`);
+// // in python, this would be: whoami[1:]
+// const rest = whoami.slice(1);
+// console.log(first + rest);
+
+// console.log(`The length of the string is ${whoami.length} chars`);
+
+// LEETSPEAK//
+const text = `i dont think you're ready for this jelly`;
+
+const lettersToConvert = ['A', 'E', 'G', 'I', 'O', 'S', 'T'];
+const numbers          = ['4', '3', '6', '1', '0', '5', '7'];
+
+const textToTranslate = text.toUpperCase();
+let translation = ``;
+
+// ES6 style array iteration
+// basically the equivaldnt of python's for loop
+for (let letter of textToTranslate){
+    // console.log(letter);
+    // check to see if the current letter is in `lettersToConvert`
+    // if so, grab the index
+    let index = lettersToConvert.indexOf(letter);
+    if (index !== -1) {
+        let index = lettersToConvert.indexOf(letter);
+    
+    // use the index to grab the corresponding item from `numbers`
+    translation = translation + numbers[index];
+    } else {
+
+        // else, just use the original letter
+        translation = translation + letter;    
+    }
+}
+
+
+console.log(translation);
